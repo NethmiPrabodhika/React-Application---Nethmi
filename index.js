@@ -87,6 +87,6 @@ app.post("/register", (req, res)=> {
 })
 
 
-app.listen(9002,() => {
-    console.log("BE started at port 9002")
+app.listen(8000,() => {
+    console.log("Started at port 8000")
 })

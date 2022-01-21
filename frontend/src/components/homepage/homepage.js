@@ -15,7 +15,7 @@ const Homepage = (props) => {
         alert(JSON.stringify(inputField));
         const { name, email, password, reEnterPassword } = inputField
         if( name && email){
-            const response = await axios.post(`http://localhost:9002/updateUser/${props.currentUser._id}`, inputField)
+            const response = await axios.post(`http://localhost:8000/updateUser/${props.currentUser._id}`, inputField)
             .catch((error) => alert(error))
 
             if (response && response.data) {
@@ -79,7 +79,7 @@ const Homepage = (props) => {
             <br/>
             <button type="button" class="btn btn-warning" style={{width:'100%'}} onClick={submitButton}>Update</button>
             <hr/>
-            <button type="button" class="btn btn-info" style={{width:'100%'}}><a style={{textDecoration:'none', color:'black'}} href="/login">Logout</a></button>
+            <a style={{textDecoration:'none', color:'black'}} href="/login"><button type="button" class="btn btn-info" style={{width:'100%'}}>Logout</button></a>
             
 
         </div>
